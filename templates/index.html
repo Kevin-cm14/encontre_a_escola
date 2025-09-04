@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}Início - Encontre a Escola{% endblock %}
+
+{% block content %}
+<div class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4" style="color:#fff;">
+                    Encontre a Escola
+                </h1>
+                <p class="lead mb-4" style="color:#fff;">
+                    Encontre informações detalhadas sobre escolas de forma rápida e visual, facilitando a tomada de decisão e o acesso a dados educacionais.
+                </p>
+                <div class="d-flex gap-3">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                    <a href="{{ url_for('map_view') }}" class="btn btn-acessar-mapa">
+                        <i class="fas fa-map me-2"></i>
+                        Acessar Mapa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="features" class="py-5" style="background:#fff;">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3" style="color:#005eb8;">Funcionalidades Principais</h2>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; background:rgba(0,94,184,0.1)!important;">
+                            <i class="fas fa-bullseye" style="font-size: 2rem; color:#005eb8;"></i>
+                        </div>
+                        <h5 class="card-title" style="color:#005eb8;">Objetivo</h5>
+                        <p class="card-text text-dark">
+                            Auxiliar na tomada de decisão para a Educação Empreendedora no estado do Rio de Janeiro, por meio da associação de dados geográficos relevantes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; background:rgba(0,94,184,0.1)!important;">
+                            <i class="fas fa-tools" style="font-size: 2rem; color:#005eb8;"></i>
+                        </div>
+                        <h5 class="card-title" style="color:#005eb8;">Ferramentas Avançadas</h5>
+                        <p class="card-text text-dark">
+                            Utilize ferramentas como medição de distâncias, áreas, coordenadas em tempo real,
+                            e visualização em tela cheia para uma experiência completa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; background:rgba(0,94,184,0.1)!important;">
+                            <i class="fas fa-mobile-alt" style="font-size: 2rem; color:#005eb8;"></i>
+                        </div>
+                        <h5 class="card-title" style="color:#005eb8;">Interface Responsiva</h5>
+                        <p class="card-text text-dark">
+                            Interface moderna e responsiva que funciona perfeitamente em desktops,
+                            tablets e smartphones, proporcionando uma experiência consistente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background:#f4f6fa;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h3 class="fw-bold mb-4" style="color:#005eb8; text-align:left;">Bases de dados utilizadas</h3>
+                <div class="mb-4" style="text-align:left;">
+                    <img src="/static/img/ibge_logo.png" alt="IBGE" style="max-height:60px; max-width:220px; margin: 0 24px 12px 0; vertical-align:middle;">
+                    <img src="/static/img/inep_logo.png" alt="INEP" style="max-height:60px; max-width:220px; margin: 0 0 12px 0; vertical-align:middle;">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4">
+                        <h5 class="card-title" style="color:#005eb8;">Como Usar</h5>
+                        <ol class="list-unstyled text-dark">
+                            <li class="mb-2">
+                                <i class="fas fa-arrow-right me-2" style="color:#005eb8;"></i>
+                                Clique em "Acessar Mapa" para abrir o visualizador
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-arrow-right me-2" style="color:#005eb8;"></i>
+                                Use o controle de camadas para alternar entre mapas base
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-arrow-right me-2" style="color:#005eb8;"></i>
+                                Explore as ferramentas disponíveis na barra lateral
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-arrow-right me-2" style="color:#005eb8;"></i>
+                                Utilize o modo tela cheia para melhor visualização
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

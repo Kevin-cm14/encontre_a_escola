@@ -1,0 +1,11 @@
+{
+    "venvPath": ".",
+    "venv": "venv",
+    "pythonPath": "C:\\Users\\marti\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "pythonVersion": "3.13",
+    "include": ["src", "app2.py"],
+    "exclude": ["venv", "__pycache__", ".pytest_cache"]
+}
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WebGIS - Sistema de Informação Geográfica{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Botão flutuante de Início - apenas na página do mapa -->
+    {% if request.endpoint == 'map_view' %}
+    <a href="{{ url_for('index') }}" class="btn btn-light shadow-sm position-fixed" style="top: 18px; left: 50%; transform: translateX(-50%); z-index: 3000; background: rgba(255,255,255,0.3); border: none; color: #222; font-weight: 500; padding: 8px 18px; border-radius: 2rem; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.9)'; this.style.color='#000';" onmouseout="this.style.background='rgba(255,255,255,0.3)'; this.style.color='#222';">
+        <i class="fas fa-home"></i>
+        Início
+    </a>
+    {% endif %}
+
+    <!-- Main Content -->
+    <main class="container-fluid p-0">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3 mt-auto" style="background:transparent !important; box-shadow:none !important;">
+        <div class="container-fluid">
+            <p class="mb-0 text-start" style="color:#111; font-size:1em; position: fixed; left: 0; bottom: 0; margin-left: 12px; background: transparent; z-index: 3001;">
+                <i class="fas fa-map-marked-alt me-1" style="color:#111;"></i>
+                Elaborado por Kevin Martins
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet.heat JS -->
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html> 

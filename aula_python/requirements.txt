@@ -1,0 +1,9 @@
+# Dependências básicas para desenvolvimento Python
+pytest>=7.0.0
+black>=22.0.0
+flake8>=4.0.0
+
+# Bibliotecas de dados e geoprocessamento
+pandas>=1.5.0
+geopandas>=1.1.0
+# numpy>=1.21.0
